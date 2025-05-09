@@ -2,12 +2,12 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>league des swatteur - Leak</title>
+  <title>Ficher-s - League des Swatteurs</title>
   <style>
     body {
-      background-color: #1c1c1c;
-      color: #ffffff;
-      font-family: Arial, sans-serif;
+      background-color: #121212;
+      color: #fff8dc;
+      font-family: 'Courier New', Courier, monospace;
       margin: 0;
       padding: 20px;
     }
@@ -15,58 +15,68 @@
     h1 {
       text-align: center;
       font-size: 3rem;
-      margin-bottom: 20px;
+      color: #ff4444;
+      margin-bottom: 40px;
+      text-shadow: 2px 2px 5px #000;
     }
 
     h2 {
       text-align: center;
       font-size: 2rem;
       margin: 40px 0 20px;
-      border-bottom: 2px solid #444;
+      border-bottom: 2px solid #aa0000;
       padding-bottom: 10px;
     }
 
-    .team {
+    .wanted-board {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       gap: 30px;
     }
 
-    .member {
-      background-color: #333;
-      border: 1px solid #444;
-      border-radius: 10px;
+    .wanted {
+      background: #1e1e1e;
+      border: 4px solid #ff0000;
+      border-radius: 12px;
       padding: 20px;
-      width: 250px;
+      width: 260px;
       text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.4);
+      transition: transform 0.3s ease;
     }
 
-    .member:hover {
+    .wanted:hover {
       transform: scale(1.05);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
     }
 
-    .member img {
+    .wanted img {
       width: 120px;
       height: 120px;
       border-radius: 50%;
       margin-bottom: 15px;
+      border: 2px solid #fff;
     }
 
-    .member h3 {
-      font-size: 1.5rem;
-      margin: 10px 0;
+    .wanted h3 {
+      font-size: 1.4rem;
+      margin: 10px 0 5px;
+      color: #ffcc00;
     }
 
-    .member a {
-      color: #00b0b0;
+    .wanted p {
+      font-size: 0.9rem;
+      color: #ccc;
+      margin-bottom: 10px;
+    }
+
+    .wanted a {
+      color: #00ffff;
+      font-weight: bold;
       text-decoration: none;
-      font-size: 1.2rem;
     }
 
-    .member a:hover {
+    .wanted a:hover {
       text-decoration: underline;
     }
 
@@ -74,23 +84,21 @@
       position: fixed;
       bottom: 20px;
       right: 20px;
-      padding: 8px 14px;
+      padding: 10px 16px;
       background-color: #0088cc;
       color: white;
       border: none;
       border-radius: 6px;
       font-size: 0.9rem;
       cursor: pointer;
-      text-align: center;
-      text-decoration: none;
       box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-      transition: transform 0.3s ease, background-color 0.3s ease;
+      transition: transform 0.3s ease;
       z-index: 1000;
     }
 
     .telegram-button:hover {
-      background-color: #006f9c;
       transform: scale(1.1);
+      background-color: #006f9c;
     }
 
     .audio-player {
@@ -128,74 +136,78 @@
 </head>
 <body>
 
-  <h1>league des swatteur</h1>
+  <h1>Ficher-s - League des Swatteurs </h1>
 
-<h2>Section Influenceurs</h2>
-<div class="team">
-  <div class="member">
-    <img src="https://i.imgur.com/JiafWVW.png" alt="Squeezie">
-    <h3>Squeezie</h3>
-    <a href="https://gofile.io/d/xIfH85" target="_blank">Voir Profil</a>
+  <h2>📂 Fiches Recherchées</h2>
+  <div class="wanted-board">
+    <div class="wanted">
+      <img src="https://i.imgur.com/JiafWVW.png" alt="Squeezie">
+      <h3>Squeezie</h3>
+      <p>extreme gauhee</p>
+      <a href="https://gofile.io/d/xIfH85" target="_blank" download>📥 Télécharger le fichier</a>
+    </div>
+
+    <div class="wanted">
+      <img src="https://i.imgur.com/MStiEpY.jpeg" alt="Tibo InShape">
+      <h3>Tibo InShape</h3>
+      <p>il a rien fait</p>
+      <a href="https://gofile.io/d/cLmRkJ" target="_blank" download>📥 Télécharger le fichier</a>
+    </div>
+
+    <div class="wanted">
+      <img src="https://i.imgur.com/BDjk7z5.jpeg" alt="Michou">
+      <h3>Michou</h3>
+      <p>Implication suspecte</p>
+      <a href="https://cdn.discordapp.com/attachments/1370321168837513229/1370321898621370408/michou.txt" download>📥 Télécharger le fichier</a>
+    </div>
+
+    <div class="wanted">
+      <img src="https://i.imgur.com/mYZ009s.jpeg" alt="Inoxtag">
+      <h3>Inoxtag</h3>
+      <p>est moche</p>
+      <a href="https://cdn.discordapp.com/attachments/1370321168837513229/1370322323256905748/inoxtag.txt" download>📥 Télécharger le fichier</a>
+    </div>
+
+    <div class="wanted">
+      <img src="https://media.discordapp.net/attachments/1370321168837513229/1370321195999952957/IMG_2038.webp" alt="Nasdas">
+      <h3>Nasdas</h3>
+      <p>prend des handicaper pour le buzz</p>
+      <a href="https://gofile.io/d/kWw7An" target="_blank" download>📥 Télécharger le fichier</a>
+    </div>
+
+    <div class="wanted">
+      <img src="https://i.imgur.com/QbHc3Te.png" alt="Rebeux Deter">
+      <h3>Rebeux Deter</h3>
+      <p>arabe </p>
+      <a href="https://cdn.discordapp.com/attachments/1370321168837513229/1370341479356170240/Rebeuxdeter.txt" download>📥 Télécharger le fichier</a>
+    </div>
+
+    <div class="wanted">
+      <img src="https://i.imgur.com/vkz4ARx.png" alt="Kelya">
+      <h3>Kelya</h3>
+      <p>faux v/p>
+      <a href="https://gofile.io/d/4slYyq" target="_blank" download>📥 Télécharger le fichier</a>
+    </div>
+
+    <div class="wanted">
+      <img src="https://imgur.com/8ytCYg8.png" alt="offwhite">
+      <h3>offwhite</h3>
+      <p>fait la rue</p>
+      <a href="https://gofile.io/d/EFpf10" target="_blank" download>📥 Télécharger le fichier</a>
+    </div>
   </div>
-
-  <div class="member">
-    <img src="https://i.imgur.com/MStiEpY.jpeg" alt="Tibo InShape">
-    <h3>Tibo InShape</h3>
-    <a href="https://gofile.io/d/cLmRkJ" target="_blank">Voir Profil</a>
-  </div>
-
-  <div class="member">
-    <img src="https://i.imgur.com/BDjk7z5.jpeg" alt="Michou">
-    <h3>Michou</h3>
-    <a href="https://cdn.discordapp.com/attachments/1370321168837513229/1370321898621370408/michou.txt?ex=681f1337&is=681dc1b7&hm=9294ae17dff600833fb18f068950752ac209788f75326165bc9d597e49eab298&" target="_blank">Voir Profil</a>
-  </div>
-
-  <div class="member">
-    <img src="https://i.imgur.com/mYZ009s.jpeg" alt="Inoxtag">
-    <h3>Inoxtag</h3>
-    <a href="https://cdn.discordapp.com/attachments/1370321168837513229/1370322323256905748/inoxtag.txt?ex=681f139d&is=681dc21d&hm=15523968f3e3d2956fcf9c6863eac4284b3729c1493faaae8587fb9636324e90&" target="_blank">Voir Profil</a>
-  </div>
-
-  <div class="member">
-    <img src="https://media.discordapp.net/attachments/1370321168837513229/1370321195999952957/IMG_2038.webp?ex=681f1290&is=681dc110&hm=d74d8908142bc5a2629e030abd55b2c1112f4d6e8cad3eadf14911355177dc81&=&format=webp&width=1000&height=667" alt="Nasdas">
-    <h3>Nasdas</h3>
-    <a href="https://gofile.io/d/kWw7An" target="_blank">Voir Profil</a>
-  </div>
-
-  <div class="member">
-    <img src="https://i.imgur.com/QbHc3Te.png" alt="Rebeux Deter">
-    <h3>Rebeux Deter</h3>
-    <a href="https://cdn.discordapp.com/attachments/1370321168837513229/1370341479356170240/Rebeuxdeter.txt?ex=681f2574&is=681dd3f4&hm=4991918911ed5152247a3080269d2f32d1720184a2943b24f6437b62d997b26a&" target="_blank">Voir Profil</a>
-  </div>
-
-  <div class="member">
-    <img src="https://i.imgur.com/vkz4ARx.png" alt="Kelya">
-    <h3>Kelya</h3>
-    <a href="https://gofile.io/d/4slYyq" target="_blank">Voir Profil</a>
-  </div>
-</div>
-
-<h2>Section Communauté / Infos</h2>
-<div class="team">
-  <div class="member">
-    <img src="https://imgur.com/8ytCYg8.png" alt="offwhite">
-    <h3>offwhite</h3>
-    <a href="https://gofile.io/d/EFpf10" target="_blank">Voir Profil</a>
-  </div>
-</div>
-
 
   <a class="telegram-button" href="https://t.me/jugementfrance" target="_blank">Rejoindre le Telegram</a>
 
   <div class="audio-player">
     <button id="playPauseBtn">▶</button>
     <button id="reloadBtn">🔄</button>
-    <button id="changeSongBtn">Changer Chanson</button>
+    <button id="changeSongBtn">🎵</button>
     <input type="range" id="volumeControl" value="100" max="100" />
   </div>
 
   <audio id="background-music" loop>
-    <source src="https://www.example.com/audio/song1.mp3" type="audio/mp3">
+    <source src="https://cdn.discordapp.com/attachments/1370321168837513229/1370387710887333939/SpotiDownloader.com_-_Kiss_Me_Again_-_Radio_Edit_-_Roy_Bee.mp3" type="audio/mp3">
     Votre navigateur ne supporte pas la balise audio.
   </audio>
 
@@ -207,9 +219,9 @@
     const audio = document.getElementById("background-music");
 
     const songs = [
-      "https://cdn.discordapp.com/attachments/1370321168837513229/1370387710887333939/SpotiDownloader.com_-_Kiss_Me_Again_-_Radio_Edit_-_Roy_Bee.mp3?ex=681f5082&is=681dff02&hm=467a6e58ff31461ac0effc97178ce9da1e4051d24efde7e532557a73a9563ca8&",
-      "https://cdn.discordapp.com/attachments/1370321168837513229/1370387710493331466/SpotiDownloader.com_-_Haschenparty_-_Schnuffel.mp3?ex=681f5082&is=681dff02&hm=49c5706ce3bd0ecccfbb77c42a72fac3b536bd1ac097036983eb531492abfe9a&",
-      "https://cdn.discordapp.com/attachments/1370321168837513229/1370387711264952330/SpotiDownloader.com_-_-_.mp3?ex=681f5082&is=681dff02&hm=4003557e4821d56b424e09642ff417f07c1566c70ad83b3e269a99bb9d554430&"
+      "https://cdn.discordapp.com/attachments/1370321168837513229/1370387710887333939/SpotiDownloader.com_-_Kiss_Me_Again_-_Radio_Edit_-_Roy_Bee.mp3",
+      "https://cdn.discordapp.com/attachments/1370321168837513229/1370387710493331466/SpotiDownloader.com_-_Haschenparty_-_Schnuffel.mp3",
+      "https://cdn.discordapp.com/attachments/1370321168837513229/1370387711264952330/SpotiDownloader.com_-_-_.mp3"
     ];
 
     let currentSongIndex = 0;
@@ -243,6 +255,5 @@
       playPauseBtn.textContent = "❚❚";
     });
   </script>
-
 </body>
 </html>
