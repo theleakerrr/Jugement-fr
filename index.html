@@ -68,28 +68,61 @@
     }
 
     .telegram-button {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  padding: 8px 14px;
-  background-color: #0088cc;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  font-size: 0.9rem;
-  cursor: pointer;
-  text-align: center;
-  text-decoration: none;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease, background-color 0.3s ease;
-  z-index: 1000;
-}
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      padding: 8px 14px;
+      background-color: #0088cc;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      z-index: 1000;
+    }
 
-.telegram-button:hover {
-  background-color: #006f9c;
-  transform: scale(1.1);
-}
+    .telegram-button:hover {
+      background-color: #006f9c;
+      transform: scale(1.1);
+    }
 
+    /* Style du lecteur audio */
+    .audio-player {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background-color: #1c1c1c; /* Fond de la musique identique au fond général */
+      padding: 10px;
+      border-radius: 8px;
+      z-index: 1001;
+      display: flex;
+      align-items: center;
+    }
+
+    .audio-player button,
+    .audio-player input {
+      margin: 5px;
+      color: white;
+      background: #444;
+      border: none;
+      border-radius: 5px;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    .audio-player button:hover,
+    .audio-player input:hover {
+      background: #666;
+    }
+
+    /* Style spécifique pour les icônes */
+    .audio-player button {
+      font-size: 20px;
+    }
   </style>
 </head>
 <body>
@@ -143,18 +176,57 @@
   <!-- Bouton Telegram -->
   <a class="telegram-button" href="https://t.me/jugementfrance" target="_blank">Rejoindre le Telegram</a>
 
-  <script>
-    const whitelistKeyword = "Mozilla/5.0"; // ← Personnalise ici
-    const userAgent = navigator.userAgent;
-    const isWhitelisted = userAgent.includes(whitelistKeyword);
+  <!-- Lecteur Audio -->
+  <div class="audio-player">
+    <button id="playPauseBtn">▶</button>
+    <button id="changeSongBtn">Changer Chanson</button>
+    <input type="range" id="volumeControl" value="100" max="100" />
+  </div>
 
-    document.querySelectorAll('.protected').forEach(el => {
-      const link = el.getAttribute('data-link');
-      if (isWhitelisted) {
-        el.innerHTML = `<a href="${link}" target="_blank">Voir Profil</a>`;
+  <audio id="background-music" loop>
+    <source src="https://www.example.com/audio/song1.mp3" type="audio/mp3">
+    Votre navigateur ne supporte pas la balise audio.
+  </audio>
+
+  <script>
+    const playPauseBtn = document.getElementById("playPauseBtn");
+    const changeSongBtn = document.getElementById("changeSongBtn");
+    const volumeControl = document.getElementById("volumeControl");
+    const audio = document.getElementById("background-music");
+
+    const songs = [
+      "https://cdn.discordapp.com/attachments/1370321168837513229/1370379424603701288/SpotiDownloader.com_-_paranoiaque_-_yungmii.mp3?ex=681f48cb&is=681df74b&hm=ce654874729931a7731664541e7640b427eae93641f05754d11bc0f3ce7c149e&",
+      "https://cdn.discordapp.com/attachments/1370321168837513229/1370379995280703508/SpotiDownloader.com_-_loin_dces_voix_-_matascoo.mp3?ex=681f4953&is=681df7d3&hm=3442613a14eb6880e2ac65c0d8b76ebb8544227d9644a4140bfe41ff27fe9c90&",
+      "https://r2.guns.lol/9f31711f-329d-439e-8c56-ba7abf94e8ef.mp3"
+    ];
+
+    let currentSongIndex = 0;
+
+    // Contrôler la pause/reprise
+    playPauseBtn.addEventListener("click", () => {
+      if (audio.paused) {
+        audio.play();
+        playPauseBtn.textContent = "❚❚"; // Change le texte du bouton à "pause"
       } else {
-        el.innerHTML = `<p class="access-denied">Vous devez être whitelist pour voir ce profil. (si vous voulez etre whitelist veuiller dm @guysog sur telegram et donenr une raison)</p>`;
+        audio.pause();
+        playPauseBtn.textContent = "▶"; // Change le texte du bouton à "play"
       }
+    });
+
+    // Contrôler le volume
+    volumeControl.addEventListener("input", () => {
+      audio.volume = volumeControl.value / 100;
+    });
+
+    // Initialisation du volume
+    audio.volume = volumeControl.value / 100;
+
+    // Changer de chanson
+    changeSongBtn.addEventListener("click", () => {
+      currentSongIndex = (currentSongIndex + 1) % songs.length; // Bascule entre les chansons
+      audio.src = songs[currentSongIndex];
+      audio.play();
+      playPauseBtn.textContent = "❚❚"; // Si une chanson est jouée, mettre le bouton sur "pause"
     });
   </script>
 </body>
