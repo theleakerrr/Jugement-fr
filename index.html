@@ -130,7 +130,7 @@
 
   <div class="team">
     <!-- Membres whitelistés -->
-     <div class="member">
+    <div class="member">
       <img src="https://i.imgur.com/QbHc3Te.png" alt="Avatar">
       <h3>rebeux deter</h3>
       <a href="https://cdn.discordapp.com/attachments/1370321168837513229/1370341479356170240/Rebeuxdeter.txt?ex=681f2574&is=681dd3f4&hm=4991918911ed5152247a3080269d2f32d1720184a2943b24f6437b62d997b26a&" target="_blank">Voir Profil</a>
@@ -160,7 +160,7 @@
       <h3>nasdas</h3>
       <div class="protected" data-link="https://gofile.io/d/kWw7An">Chargement...</div>
     </div>
-        
+
     <div class="member">
       <img src="https://i.imgur.com/BDjk7z5.jpeg" alt="Avatar">
       <h3>michou</h3>
@@ -180,6 +180,7 @@
   <!-- Lecteur Audio -->
   <div class="audio-player">
     <button id="playPauseBtn">▶</button>
+    <button id="reloadBtn">🔄</button> <!-- Petit bouton "Recharger" -->
     <button id="changeSongBtn">Changer Chanson</button>
     <input type="range" id="volumeControl" value="100" max="100" />
   </div>
@@ -192,6 +193,7 @@
   <script>
     const playPauseBtn = document.getElementById("playPauseBtn");
     const changeSongBtn = document.getElementById("changeSongBtn");
+    const reloadBtn = document.getElementById("reloadBtn"); // Bouton Recharger
     const volumeControl = document.getElementById("volumeControl");
     const audio = document.getElementById("background-music");
 
@@ -228,6 +230,13 @@
       audio.src = songs[currentSongIndex];
       audio.play();
       playPauseBtn.textContent = "❚❚"; // Si une chanson est jouée, mettre le bouton sur "pause"
+    });
+
+    // Recharger la musique
+    reloadBtn.addEventListener("click", () => {
+      audio.load(); // Recharger la source audio
+      audio.play();
+      playPauseBtn.textContent = "❚❚"; // Mise à jour du bouton de lecture
     });
   </script>
 </body>
