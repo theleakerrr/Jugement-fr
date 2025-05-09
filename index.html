@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>jugement fr</title>
+  <title>ARK Team</title>
   <style>
     body {
       background-color: #1c1c1c;
@@ -14,7 +14,6 @@
 
     h1 {
       text-align: center;
-      color: #ffffff;
       font-size: 3rem;
       margin-bottom: 40px;
     }
@@ -27,18 +26,18 @@
     }
 
     .member {
-      background-color: #333333;
-      border: 1px solid #444444;
+      background-color: #333;
+      border: 1px solid #444;
       border-radius: 10px;
       padding: 20px;
       width: 250px;
       text-align: center;
-      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .member:hover {
       transform: scale(1.05);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8); /* Ombre noire au survol */
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
     }
 
     .member img {
@@ -49,7 +48,6 @@
     }
 
     .member h3 {
-      color: #ffffff;
       font-size: 1.5rem;
       margin: 10px 0;
     }
@@ -63,47 +61,101 @@
     .member a:hover {
       text-decoration: underline;
     }
+
+    .access-denied {
+      color: red;
+      font-size: 1.1rem;
+    }
+
+    .telegram-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 8px 14px;
+  background-color: #0088cc;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  z-index: 1000;
+}
+
+.telegram-button:hover {
+  background-color: #006f9c;
+  transform: scale(1.1);
+}
+
   </style>
 </head>
 <body>
   <h1>jugement fr</h1>
 
   <div class="team">
+    <!-- Membres whitelistés -->
     <div class="member">
       <img src="https://i.imgur.com/QbHc3Te.png" alt="Avatar">
       <h3>rebeux deter</h3>
-      <a href="https://cdn.discordapp.com/attachments/1370321168837513229/1370341479356170240/Rebeuxdeter.txt?ex=681f2574&is=681dd3f4&hm=4991918911ed5152247a3080269d2f32d1720184a2943b24f6437b62d997b26a&" target="_blank">Voir Profil</a>
+      <div class="protected" data-link="https://cdn.discordapp.com/attachments/1370321168837513229/1370341479356170240/Rebeuxdeter.txt?ex=681f2574&is=681dd3f4&hm=4991918911ed5152247a3080269d2f32d1720184a2943b24f6437b62d997b26a&">Chargement...</div>
     </div>
+
+    <div class="member">
+      <img src="https://i.imgur.com/vkz4ARx.png" alt="Avatar">
+      <h3>kelya</h3>
+      <div class="protected" data-link="https://gofile.io/d/4slYyq">Chargement...</div>
+    </div>
+
+    <!-- Membres visibles pour tout le monde -->
     <div class="member">
       <img src="https://i.imgur.com/JiafWVW.png" alt="Avatar">
       <h3>squeezie</h3>
       <a href="https://gofile.io/d/xIfH85" target="_blank">Voir Profil</a>
     </div>
-    <div class="member">
-      <img src="https://i.imgur.com/vkz4ARx.png" alt="Avatar">
-      <h3>kelya</h3>
-      <a href="https://gofile.io/d/4slYyq" target="_blank">Voir Profil</a>
-    </div>
+
     <div class="member">
       <img src="https://i.imgur.com/MStiEpY.jpeg" alt="Avatar">
       <h3>tibo inshape</h3>
       <a href="https://gofile.io/d/cLmRkJ" target="_blank">Voir Profil</a>
     </div>
+
     <div class="member">
-      <img src="https://cdn.discordapp.com/attachments/1370321168837513229/1370321195999952957/IMG_2038.webp?ex=681f1290&is=681dc110&hm=d74d8908142bc5a2629e030abd55b2c1112f4d6e8cad3eadf14911355177dc81&" alt="Avatar">
+      <img src="https://cdn.discordapp.com/attachments/1370321168837513229/1370321195999952957/IMG_2038.webp" alt="Avatar">
       <h3>nasdas</h3>
-      <a href="https://gofile.io/d/kWw7An" target="_blank">Voir Profil</a>
+      <div class="protected" data-link="https://gofile.io/d/kWw7An">Chargement...</div>
     </div>
     <div class="member">
       <img src="https://i.imgur.com/BDjk7z5.jpeg" alt="Avatar">
       <h3>michou</h3>
       <a href="https://cdn.discordapp.com/attachments/1370321168837513229/1370321898621370408/michou.txt?ex=681f1337&is=681dc1b7&hm=9294ae17dff600833fb18f068950752ac209788f75326165bc9d597e49eab298&" target="_blank">Voir Profil</a>
     </div>
+
     <div class="member">
       <img src="https://i.imgur.com/mYZ009s.jpeg" alt="Avatar">
       <h3>inoxtag</h3>
       <a href="https://cdn.discordapp.com/attachments/1370321168837513229/1370322323256905748/inoxtag.txt?ex=681f139d&is=681dc21d&hm=15523968f3e3d2956fcf9c6863eac4284b3729c1493faaae8587fb9636324e90&" target="_blank">Voir Profil</a>
     </div>
   </div>
+
+  <!-- Bouton Telegram -->
+  <a class="telegram-button" href="https://t.me/jugementfrance" target="_blank">Rejoindre le Telegram</a>
+
+  <script>
+    const whitelistKeyword = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36,"; // ← Personnalise ici
+    const userAgent = navigator.userAgent;
+    const isWhitelisted = userAgent.includes(whitelistKeyword);
+
+    document.querySelectorAll('.protected').forEach(el => {
+      const link = el.getAttribute('data-link');
+      if (isWhitelisted) {
+        el.innerHTML = `<a href="${link}" target="_blank">Voir Profil</a>`;
+      } else {
+        el.innerHTML = `<p class="access-denied">Vous devez être whitelist pour voir ce profil. (si vous voulez etre whitelist veuiller dm @guysog sur telegram et donenr une raison)</p>`;
+      }
+    });
+  </script>
 </body>
 </html>
