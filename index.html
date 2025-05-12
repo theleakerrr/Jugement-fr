@@ -134,10 +134,17 @@
       font-size: 20px;
     }
   </style>
+  <!-- Firebase SDK -->
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.6.10/firebase-database.js"></script>
 </head>
 <body>
 
-  <h1>Ficher By League des Swatteurs </h1>
+  <h1>Ficher By League des Swatteurs</h1>
+
+  <div id="live-counter">
+    Utilisateurs en ligne : <span id="count">0</span>
+  </div>
 
   <h2>📂 Fiches Leak</h2>
   <div class="wanted-board">
