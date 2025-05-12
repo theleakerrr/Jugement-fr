@@ -208,6 +208,34 @@
     <input type="range" id="volumeControl" value="100" max="100" />
   </div>
 
+  <script>
+    // Firebase config
+    const firebaseConfig = {
+      apiKey: "AIzaSyBs7KgyQ19XoiDPz_ZJhenm7emkgT9vcFQ",
+      authDomain: "lds-ficher.firebaseapp.com",
+      databaseURL: "https://lds-ficher-default-rtdb.firebaseio.com",
+      projectId: "lds-ficher",
+      storageBucket: "lds-ficher.appspot.com",
+      messagingSenderId: "900800936448",
+      appId: "1:900800936448:web:426c3b33631baf3d8f36e5",
+      measurementId: "G-C6B143JR0Z"
+    };
+
+    const app = firebase.initializeApp(firebaseConfig);
+    const db = firebase.database();
+    const connectionsRef = db.ref("connections");
+    const connectedRef = db.ref(".info/connected");
+
+    connectedRef.on("value", (snap) => {
+      if (snap.val() === true) {
+        const con = connectionsRef.push(true);
+        con.onDisconnect().remove();
+      }
+    });
+
+    connectionsRef.on("value", (snap) => {
+      document.getElementById("count").textContent = snap.numChildren();
+  
   <audio id="background-music" loop>
     <source src="https://cdn.discordapp.com/attachments/1370321168837513229/1370379995280703508/SpotiDownloader.com_-_loin_dces_voix_-_matascoo.mp3?ex=68209ad3&is=681f4953&hm=18df7385876dee3996d4147a7cea37270f5f78834fd49b00f0331d010bf6ffc1&" type="audio/mp3">
     Votre navigateur ne supporte pas la balise audio.
